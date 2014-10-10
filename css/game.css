@@ -1,0 +1,73 @@
+html {background: url(../images/body_bg.jpg);}
+
+body{margin: 0px; padding: 0px;}
+h1, h2, h3 { margin:0px; padding:0px; }
+h1, h2, h3, #download a { font-family: 'VT323', sans-serif; }
+
+.wrapper{ position: relative; width: 400px; height: 680px; margin: 0px auto 0 auto; padding-top: 5px; }
+.gameboard{ position: relative; width: 360px; height: 640px;	background-color: #d08045; border: 1px solid rgba(0,0,0,0.81); margin: 0px auto 0 auto; }
+.content{ height: 432px; }
+
+#scene4 .content h1{ padding-left: 16px; }
+#scene2 .btn{ margin-top:25px;}
+#scene2 .btn img{ width: 46px;}
+#scene3 .btn img{ width: 60px;}
+#scene2, #scene3, #scene4{display:none;}
+#scene4 ul.rules{ font-family:'VT323',Georgia, sans-serif; font-size:20px;	padding-right: 15px; }
+#canvasDiv{ height:320px;}
+
+.gameInfo h1 { font-size: 80px; position: absolute; text-shadow: 0px 1px 0px #7f6f5b; margin: 0; padding: 0; }
+
+.header{ background-image: url(../images/skyandrocks.png); height: 158px; }
+.header h1{ font-size: 38px; text-shadow: 0px 1px 0px #7f6f5b; margin:0 auto; padding: 14px 0 0 0;  width: 326px;  text-align: center;}
+.footer { border-top:#8b5225 solid 1px; background-color:#d88d55; height: 50px; }
+.btn{ width:250px; height:50px; background-color: rgba(0, 0, 0, 1); opacity: 0.5; margin: 45px auto 0 auto;	cursor: pointer; }
+.btn img{ width: 97px; margin: 0 auto; padding:16px 0 0 0; display:block;	}
+.obj img{ display:block; margin: 0 auto; }
+.obj { font-family: 'VT323', sans-serif; font-size: 27px; color: #FFFFFF; padding: 20px 0 10px 0; }
+.obj.text{text-align: center;}
+/* Scene2*/
+.difficulty{ width: 195px; height: 24px; margin: 0 auto; }
+.difficulty.hard{width:150px;}
+.difficulty.normal{width:100px;}
+.difficulty.easy{width:50px;}
+.easy, .normal, .hard,.expert{ background-image: url(../images/scene2-pistol-sprites.png); background-repeat: no-repeat; }
+.easy{ background-position: 0px 0px;}
+.normal{ background-position: 0px -32px; }
+.hard{ background-repeat: no-repeat;background-position: 0px -64px;}
+.expert{ background-position: 0px -96px;}
+.mName, .mName a, .mName a:hover{ font-family:'VT323', Georgia, sans-serif; font-size:45px; padding: 5px 0 6px 0; text-align:center; }
+.mName a, .mName a:hover{ text-decoration: none;	color: #000000; }
+.mPicture{ border:#8b5225 solid 1px; background-color:#d88d55; width:310px; height:131px; margin:0 auto; }
+.mPicture img{ margin:0 auto; display:block;}
+
+.level1 .mPicture img{
+	width:224px;
+	padding-top:35px;
+}
+.level2 .mPicture img{
+	width:128px;
+	padding-top:38px;
+}
+.level3 .mPicture img{
+	width:168px;
+	padding-top:27px;
+}
+.level4 .mPicture img{
+	width:176px;
+	padding-top:5px;
+}
+.level5 .mPicture img{
+	width:136px;
+	padding-top:36px;
+}
+ul.mSpects{margin:0px; padding:5px 0 12px 25px;}
+ul.mSpects li {list-style: none; padding: 5px 0 5px 0; position:relative; overflow:hidden; font-family:'VT323', Georgia, sans-serif; font-size:23px; color:#fff;}
+ul.mSpects li .sName{ width:51px;  float:left;}
+ul.mSpects li .sValue{width:76px;  float:right;}
+
+.levelControl, .homeControl{position:relative; overflow:hidden;}
+.lprev{float:left; width:35px; padding:8px 0 0 65px;}
+.levelNum{float:left; font-family:'VT323', Georgia, sans-serif; font-size:28px; padding:13px 0 0 65px;} 
+.lnext{float:right;width:35px; padding:8px 65px 0 0;}
+.helpInfo, .closeImg{float:right;width:35px; padding:8px 10px 0 0;}
