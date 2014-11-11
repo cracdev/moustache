@@ -12,7 +12,7 @@ this.DM = this.DM || {};
 		var Scene1 = $('div#scene1'),
 			Scene2 = $('div#scene2'),
 			Scene3 = $('div#scene3'),
-			Scene4 = $('div#scene4')
+			Scene4 = $('div#scene4');
 			createjs.Sound.registerPlugins([createjs.WebAudioPlugin, createjs.FlashPlugin]);
 			createjs.Sound.registerSound("audio/tick.ogg", "tick");
 			createjs.Sound.registerSound("audio/shoot.ogg", "shoot");
