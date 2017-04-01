@@ -52,8 +52,7 @@ this.DM = this.DM || {};
 			curFPS = numFramesDrawn;
 			numFramesDrawn = 0;
 		}
-		function prepareCanvas(canvasDiv, canvasWidth, canvasHeight, objSettings)
-		{
+		function prepareCanvas(canvasDiv, canvasWidth, canvasHeight, objSettings) {
 		
 			playerStats = { ' nSpeed' : '',
 							'sGameTitle' : '',
@@ -64,7 +63,6 @@ this.DM = this.DM || {};
 			fpsInterval = setInterval(updateFPS, 1000);
 			
 			computerxShootTime = ((objSettings.nSpeed*1000) - objSettings.nVitality);
-			console.log("computerxShootTime >> "+computerxShootTime)
 			
 			vcanvas = document.createElement('canvas');
 			vcanvas.setAttribute('width', canvasWidth);
@@ -105,7 +103,6 @@ this.DM = this.DM || {};
 			vcanvas.addEventListener("click", onClick, false);
 			createjs.Sound.play('bgSnd');
 			
-		
 		}
 		function loadImage(name) {
 		
@@ -220,9 +217,11 @@ this.DM = this.DM || {};
 				}
 			} catch (ex) { }
 		}
+		
 		function randomFromInterval(from,to){
 			return Math.floor(Math.random()*(to-from+1)+from);
 		}
+		
 		function updateBreath() { 
 	
 			if (breathDir === 1) {  // breath in
@@ -237,6 +236,7 @@ this.DM = this.DM || {};
 				}
 			}
 		}
+		
 		function showReadySteady() {
 			
 			curShowingTime+=1;
@@ -293,8 +293,8 @@ this.DM = this.DM || {};
 			}
 		
 		}
+		
 		function shootPlayer(){
-			console.log("BULLET > " + bullet);
 			if(bullet==1){
 				
 				playerxShootTime = tc;
@@ -308,12 +308,12 @@ this.DM = this.DM || {};
 			
 						
 		}
+		
 		function shootTimeCount(){
 			
 			tc=tc+1;
 			
 			if(tc===22){
-				console.log("hide Bang > " + tc);
 				displayBang();
 			}
 			
@@ -329,6 +329,7 @@ this.DM = this.DM || {};
 				}				
 			}
 		}
+		
 		function shoot() {
 			showBang = false;
 		
@@ -338,35 +339,31 @@ this.DM = this.DM || {};
 			}
 		
 		}
+		
 		function deathComputer(){
-			console.log("Show Game Over deathComputer");
-			console.log("Show Game Over playerxShootTime" + playerxShootTime);
-			console.log("Show Game Over computerxShootTime" + computerxShootTime);	
 			playerStats.nSpeed = "Your speed " + (playerxShootTime/1000);
 			playerStats.sGameTitle = "You Win";
 			playerStats.sGameInfo = "Game Over";
 			DM.Overlay.panel.show(playerStats);
-			console.log("playerStats " + playerStats.nSpeed);
 		}
+		
 		function deathPlayer(){
-			console.log("Show Game Over deathPlayer");
-			console.log("Show Game Over playerxShootTime" + playerxShootTime);
-			console.log("Show Game Over computerxShootTime" + computerxShootTime);
 			playerStats.nSpeed = "Speed " + (computerxShootTime/1000);
 			playerStats.sGameTitle = "You Lose";
 			playerStats.sGameInfo = "Game Over";
 			DM.Overlay.panel.show(playerStats);
 		}
+		
 		function unholster() {
-			console.log("unholster");
 			shooting = false;
 			platerxBlood = true;
 			setTimeout(deathPlayer, 1000);
 		}
+		
 		function onClick(){
-			console.log("click canvas");
 			shootPlayer();
 		}
+		
 		function clearGameOver() {
 		
 			clearInterval(redrawInterval);
@@ -406,7 +403,6 @@ this.DM = this.DM || {};
 	DM.Canvas = Canvas;
 
 }());
-
 
 
 // Canvas is Based on the example of 

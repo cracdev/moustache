@@ -62,7 +62,6 @@ this.DM = this.DM || {};
 			var lFactory = new Prepare.LevelFactory();
 			
 			var lEasy = lFactory.createLevel({
-				//name : 'Carlos Alvarado',
 				difficulty : 'easy',
 				kills : 2,
 			});
